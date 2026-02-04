@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of elite web design projects — automotive, luxury, and startup brands.">
+  <title>Our Work — bytecrafts.ca</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress">
+    <div class="scroll-progress__bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="/index.html" class="header__logo">bytecrafts</a>
+      <button class="mobile-menu-toggle">☰</button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="/work.html" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="/services.html" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="/pricing.html" class="nav__link">Pricing</a></li>
+          <li class="nav__item"><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section section--hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title" data-reveal="line">
+          Work That Speaks for Itself
+        </h1>
+        <p class="hero__subtitle" data-reveal="up">
+          Award-level design meets measurable results. Every project engineered for performance, conversion, and lasting impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="section">
+    <div class="container">
+      <div class="filters" data-reveal="fade">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="automotive">Automotive</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+        <button class="filter-btn" data-filter="startup">Startup</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid--2">
+        <!-- Project 1 -->
+        <div class="project-card" data-reveal="mask" data-category="automotive" data-modal-open="project1">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3EElite Auto Dealership%3C/text%3E%3C/svg%3E" alt="Elite Auto Dealership" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>Elite Auto Dealership</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Complete website redesign for premium car dealership</p>
+            <div class="card__meta">
+              <span class="chip">Automotive</span>
+              <span class="chip chip--accent">+156% Traffic</span>
+              <span class="chip chip--accent">99 Lighthouse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-reveal="mask" data-category="luxury" data-modal-open="project2">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3EPremium Restaurant%3C/text%3E%3C/svg%3E" alt="Premium Restaurant" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>Premium Restaurant Chain</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Multi-location booking system with editorial design</p>
+            <div class="card__meta">
+              <span class="chip">Luxury</span>
+              <span class="chip chip--accent">+89% Bookings</span>
+              <span class="chip chip--accent">98 Lighthouse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-reveal="mask" data-category="startup" data-modal-open="project3">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3ESaaS Platform%3C/text%3E%3C/svg%3E" alt="SaaS Platform" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>SaaS Platform Launch</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Complete brand and marketing site for Series A startup</p>
+            <div class="card__meta">
+              <span class="chip">Startup</span>
+              <span class="chip chip--accent">$2M Raised</span>
+              <span class="chip chip--accent">100 Lighthouse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-reveal="mask" data-category="automotive" data-category="ecommerce" data-modal-open="project4">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3EPerformance Parts%3C/text%3E%3C/svg%3E" alt="Performance Parts" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>Performance Parts E-commerce</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Custom Shopify store with advanced filtering</p>
+            <div class="card__meta">
+              <span class="chip">Automotive</span>
+              <span class="chip">E-commerce</span>
+              <span class="chip chip--accent">+234% Sales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-reveal="mask" data-category="luxury" data-modal-open="project5">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3EBoutique Hotel%3C/text%3E%3C/svg%3E" alt="Boutique Hotel" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>Boutique Hotel Group</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Elegant booking experience with immersive imagery</p>
+            <div class="card__meta">
+              <span class="chip">Luxury</span>
+              <span class="chip chip--accent">+142% Direct Bookings</span>
+              <span class="chip chip--accent">99 Lighthouse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-reveal="mask" data-category="startup" data-modal-open="project6">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3EFintech App%3C/text%3E%3C/svg%3E" alt="Fintech App" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>Fintech Web Application</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Secure, fast dashboard with real-time data</p>
+            <div class="card__meta">
+              <span class="chip">Startup</span>
+              <span class="chip chip--accent">10k Users</span>
+              <span class="chip chip--accent">98 Lighthouse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card" data-reveal="mask" data-category="ecommerce" data-modal-open="project7">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3EFashion Boutique%3C/text%3E%3C/svg%3E" alt="Fashion Boutique" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>Fashion Boutique Online</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Editorial e-commerce with AR try-on integration</p>
+            <div class="card__meta">
+              <span class="chip">E-commerce</span>
+              <span class="chip chip--accent">+178% Conversion</span>
+              <span class="chip chip--accent">97 Lighthouse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card" data-reveal="mask" data-category="automotive" data-modal-open="project8">
+          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='24'%3EClassic Car Auction%3C/text%3E%3C/svg%3E" alt="Classic Car Auction" class="project-card__image">
+          <div class="project-card__overlay">
+            <h3>Classic Car Auction Platform</h3>
+            <p style="font-size: 0.9rem; margin: 0.5rem 0;">Live bidding system with high-res imagery</p>
+            <div class="card__meta">
+              <span class="chip">Automotive</span>
+              <span class="chip chip--accent">$12M Sales</span>
+              <span class="chip chip--accent">99 Lighthouse</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" data-reveal="up">
+        <h2 class="mb-2">Your Project Could Be Next</h2>
+        <p class="text-large mb-3" style="max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.8;">
+          Let's build something exceptional together.
+        </p>
+        <a href="/contact.html" class="btn btn--primary">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Template -->
+  <div id="project1" class="modal">
+    <button class="modal__close" data-modal-close>×</button>
+    <div class="modal__content">
+      <div data-reveal="up">
+        <h2 class="mb-2">Elite Auto Dealership</h2>
+        <div class="card__meta mb-3">
+          <span class="chip">Automotive</span>
+          <span class="chip chip--accent">+156% Traffic</span>
+          <span class="chip chip--accent">99 Lighthouse</span>
+        </div>
+        <p class="text-large mb-3">
+          Complete website redesign for a premium luxury car dealership. Focus on immersive vehicle showcases, streamlined inventory browsing, and lead generation.
+        </p>
+        <h3 class="mb-2">Challenge</h3>
+        <p class="mb-3">
+          The existing site had poor mobile performance, outdated design, and a clunky inventory system. Visitors weren't converting into leads.
+        </p>
+        <h3 class="mb-2">Solution</h3>
+        <p class="mb-3">
+          We designed a Swiss editorial layout with high-res vehicle imagery, implemented advanced filtering, and optimized for sub-2-second load times. Added lead capture forms at strategic points.
+        </p>
+        <h3 class="mb-2">Results</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">→ 156% increase in organic traffic</li>
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">→ 99 Lighthouse score (mobile)</li>
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">→ 1.8s average load time</li>
+          <li style="padding: 0.5rem 0;">→ 89% increase in qualified leads</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h4>bytecrafts</h4>
+          <p style="opacity: 0.7; font-size: 0.95rem;">
+            Elite web design and development for brands that demand excellence.
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="/services.html">Web Design</a></li>
+            <li><a href="/services.html">Development</a></li>
+            <li><a href="/services.html">Branding</a></li>
+            <li><a href="/services.html">SEO Strategy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h4>Connect</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@bytecrafts.ca">hello@bytecrafts.ca</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        © 2026 bytecrafts.ca — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
