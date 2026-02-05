@@ -3,315 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="bytecrafts.ca — Elite web design for automotive, luxury, and startups. 98+ Lighthouse scores, SEO-ready, fast load.">
-  <title>bytecrafts.ca — Elite Web Design & Development</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <title>Bytecrafts – Web Design Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress">
-    <div class="scroll-progress__bar"></div>
-  </div>
-
-  <!-- Header -->
   <header class="header">
-    <div class="header__inner">
-      <a href="/index.html" class="header__logo">bytecrafts</a>
-      <button class="mobile-menu-toggle">☰</button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="/index.html" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="/work.html" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="/services.html" class="nav__link">Services</a></li>
-          <li class="nav__item"><a href="/pricing.html" class="nav__link">Pricing</a></li>
-          <li class="nav__item"><a href="/contact.html" class="nav__link">Contact</a></li>
-        </ul>
-      </nav>
+    <a href="/" class="logo">Bytecrafts</a>
+    <nav class="nav">
+      <a href="#work">Work <sup>(6)</sup></a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-meta">
+      <span class="location">NYC</span>
+      <span class="year">2024</span>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="section section--hero">
-    <div class="container">
-      <div class="hero__content">
-        <h1 class="hero__title" data-reveal="line">
-          We build elite websites that convert
-        </h1>
-        <p class="hero__subtitle" data-reveal="up">
-          Award-level design and development for automotive brands, luxury businesses, and ambitious startups.
-        </p>
-        
-        <div class="hero__chips" data-reveal="fade">
-          <span class="chip chip--accent">98+ Lighthouse</span>
-          <span class="chip chip--accent">SEO-Ready</span>
-          <span class="chip chip--accent">Fast Load</span>
-          <span class="chip chip--accent">Responsive</span>
-        </div>
-        
-        <div class="hero__cta" data-reveal="up">
-          <a href="/work.html" class="btn btn--primary">View Our Work</a>
-          <a href="/contact.html" class="btn">Start a Project</a>
-        </div>
+  <main>
+    <section class="hero">
+      <div class="hero-mark" aria-hidden="true">
+        <span class="hero-mark-inner">BC</span>
       </div>
-    </div>
-  </section>
+      <a href="#work" class="hero-cta">
+        <span class="hero-cta-text">View Work</span>
+        <span class="hero-cta-text hero-cta-text--hover">View Work</span>
+      </a>
+    </section>
 
-  <!-- Featured Work Section -->
-  <section id="work" class="section">
-    <div class="container">
-      <div class="section-header" data-reveal="up">
-        <div class="section-header__label">Recent Projects</div>
-        <h2 class="section-header__title">Work That Drives Results</h2>
-        <p class="section-header__text">
-          We partner with forward-thinking brands to create digital experiences that captivate audiences and deliver measurable business impact.
-        </p>
+    <section class="intro" id="work">
+      <div class="dictionary">
+        <span class="dictionary-pronunciation">/ˈbaɪtkrɑːfts/</span>
+        <em class="dictionary-pos">adjective</em>
+        <span class="dictionary-def">crafted in code</span>
       </div>
+      <h1 class="headline">
+        <span class="word-wrap"><span class="word">A</span></span>
+        <span class="word-wrap"><span class="word">Web</span></span>
+        <span class="word-wrap"><span class="word">Design</span></span>
+        <span class="word-wrap"><span class="word">Studio</span></span>
+        <span class="word-wrap"><span class="word">That</span></span>
+        <span class="word-wrap"><span class="word">Builds</span></span>
+        <span class="word-wrap"><span class="word">Sites</span></span>
+        <span class="word-wrap"><span class="word">That</span></span>
+        <span class="word-wrap"><span class="word">Move.</span></span>
+        <span class="word-wrap"><span class="word">We</span></span>
+        <span class="word-wrap"><span class="word">Combine</span></span>
+        <span class="word-wrap"><span class="word">Strategy,</span></span>
+        <span class="word-wrap"><span class="word">Design</span></span>
+        <span class="word-wrap"><span class="word">&</span></span>
+        <span class="word-wrap"><span class="word">Development</span></span>
+        <span class="word-wrap"><span class="word">–</span></span>
+        <span class="word-wrap"><span class="word">Specializing</span></span>
+        <span class="word-wrap"><span class="word">in</span></span>
+        <span class="word-wrap"><span class="word">Modern</span></span>
+        <span class="word-wrap"><span class="word">Web.</span></span>
+      </h1>
 
-      <div class="grid grid--2">
-        <div class="project-card" data-reveal="mask" data-category="automotive">
-          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='32'%3EAutomotive Project%3C/text%3E%3C/svg%3E" alt="Automotive Project" class="project-card__image">
-          <div class="project-card__overlay">
-            <h3>Luxury Auto Dealership</h3>
-            <div class="card__meta">
-              <span class="chip">Automotive</span>
-              <span class="chip chip--accent">+156% Traffic</span>
+      <ul class="project-list">
+        <li class="project-item">
+          <a href="#" class="project-link">
+            <div class="project-image-wrap">
+              <div class="project-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);"></div>
             </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-reveal="mask" data-category="luxury">
-          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='32'%3ELuxury Brand%3C/text%3E%3C/svg%3E" alt="Luxury Brand" class="project-card__image">
-          <div class="project-card__overlay">
-            <h3>Premium Restaurant Chain</h3>
-            <div class="card__meta">
-              <span class="chip">Luxury</span>
-              <span class="chip chip--accent">+89% Bookings</span>
+            <div class="project-info">
+              <span class="project-name">
+                <span class="char">B</span><span class="char">r</span><span class="char">a</span><span class="char">n</span><span class="char">d</span><span class="char">A</span><span class="char">.</span>
+              </span>
+              <span class="project-tagline">Identity & Web</span>
             </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-reveal="mask" data-category="startup">
-          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='32'%3ETech Startup%3C/text%3E%3C/svg%3E" alt="Tech Startup" class="project-card__image">
-          <div class="project-card__overlay">
-            <h3>SaaS Platform Launch</h3>
-            <div class="card__meta">
-              <span class="chip">Startup</span>
-              <span class="chip chip--accent">$2M Raised</span>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="#" class="project-link">
+            <div class="project-image-wrap">
+              <div class="project-image" style="background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);"></div>
             </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-reveal="mask" data-category="automotive">
-          <img src="data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23d4a574' font-family='Arial' font-size='32'%3EAuto Parts%3C/text%3E%3C/svg%3E" alt="Auto Parts" class="project-card__image">
-          <div class="project-card__overlay">
-            <h3>Performance Parts E-commerce</h3>
-            <div class="card__meta">
-              <span class="chip">Automotive</span>
-              <span class="chip chip--accent">+234% Sales</span>
+            <div class="project-info">
+              <span class="project-name">
+                <span class="char">C</span><span class="char">o</span><span class="char">r</span><span class="char">e</span><span class="char">L</span><span class="char">a</span><span class="char">b</span><span class="char">s</span>
+              </span>
+              <span class="project-tagline">A new presence</span>
             </div>
-          </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="#" class="project-link">
+            <div class="project-image-wrap">
+              <div class="project-image" style="background: linear-gradient(135deg, #1e1e1e 0%, #333 100%);"></div>
+            </div>
+            <div class="project-info">
+              <span class="project-name">
+                <span class="char">M</span><span class="char">o</span><span class="char">t</span><span class="char">i</span><span class="char">o</span><span class="char">n</span><span class="char">.</span><span class="char">i</span><span class="char">o</span>
+              </span>
+              <span class="project-tagline">Web experience</span>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="#" class="project-link">
+            <div class="project-image-wrap">
+              <div class="project-image" style="background: linear-gradient(135deg, #2a2a2a 0%, #1c1c1c 100%);"></div>
+            </div>
+            <div class="project-info">
+              <span class="project-name">
+                <span class="char">P</span><span class="char">a</span><span class="char">l</span><span class="char">e</span><span class="char">t</span><span class="char">t</span><span class="char">e</span>
+              </span>
+              <span class="project-tagline">Taste the full palette</span>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="#" class="project-link">
+            <div class="project-image-wrap">
+              <div class="project-image" style="background: linear-gradient(135deg, #222 0%, #282828 100%);"></div>
+            </div>
+            <div class="project-info">
+              <span class="project-name">
+                <span class="char">S</span><span class="char">t</span><span class="char">u</span><span class="char">d</span><span class="char">i</span><span class="char">o</span><span class="char">X</span>
+              </span>
+              <span class="project-tagline">Where ideas ship</span>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="#" class="project-link">
+            <div class="project-image-wrap">
+              <div class="project-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #262626 100%);"></div>
+            </div>
+            <div class="project-info">
+              <span class="project-name">
+                <span class="char">V</span><span class="char">e</span><span class="char">r</span><span class="char">t</span><span class="char">i</span><span class="char">g</span><span class="char">o</span>
+              </span>
+              <span class="project-tagline">Scroll & delight</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-grid">
+        <div class="contact-block">
+          <h3>Business</h3>
+          <a href="mailto:hello@bytecrafts.design">hello@bytecrafts.design</a>
+        </div>
+        <div class="contact-block">
+          <h3>General</h3>
+          <a href="mailto:hi@bytecrafts.design">hi@bytecrafts.design</a>
+        </div>
+        <div class="contact-block">
+          <h3>Say hello</h3>
+          <a href="mailto:hey@bytecrafts.design">hey@bytecrafts.design</a>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="text-center mt-4" data-reveal="up">
-        <a href="/work.html" class="btn">View All Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-header" data-reveal="up">
-        <div class="section-header__label">What We Do</div>
-        <h2 class="section-header__title">Services Built for Performance</h2>
-      </div>
-
-      <div class="grid grid--3">
-        <div class="card" data-reveal="up">
-          <div class="card__title">Web Design</div>
-          <p class="card__text">
-            Swiss-inspired editorial layouts that command attention. Every pixel crafted for impact and conversion.
-          </p>
-          <div class="card__meta">
-            <span class="chip">UI/UX</span>
-            <span class="chip">Figma</span>
-            <span class="chip">Prototyping</span>
-          </div>
-        </div>
-
-        <div class="card" data-reveal="up">
-          <div class="card__title">Development</div>
-          <p class="card__text">
-            Lightning-fast, SEO-optimized code. 98+ Lighthouse scores aren't a goal—they're our baseline.
-          </p>
-          <div class="card__meta">
-            <span class="chip">React</span>
-            <span class="chip">Next.js</span>
-            <span class="chip">Performance</span>
-          </div>
-        </div>
-
-        <div class="card" data-reveal="up">
-          <div class="card__title">Branding</div>
-          <p class="card__text">
-            Visual identity systems that resonate with your audience and stand the test of time.
-          </p>
-          <div class="card__meta">
-            <span class="chip">Identity</span>
-            <span class="chip">Typography</span>
-            <span class="chip">Guidelines</span>
-          </div>
-        </div>
-
-        <div class="card" data-reveal="up">
-          <div class="card__title">SEO Strategy</div>
-          <p class="card__text">
-            Technical SEO that gets you found. On-page optimization, schema markup, and performance tuning.
-          </p>
-          <div class="card__meta">
-            <span class="chip">Technical SEO</span>
-            <span class="chip">Analytics</span>
-            <span class="chip">Schema</span>
-          </div>
-        </div>
-
-        <div class="card" data-reveal="up">
-          <div class="card__title">E-commerce</div>
-          <p class="card__text">
-            Custom shopping experiences that convert browsers into buyers. Shopify, WooCommerce, or custom.
-          </p>
-          <div class="card__meta">
-            <span class="chip">Shopify</span>
-            <span class="chip">Payments</span>
-            <span class="chip">Analytics</span>
-          </div>
-        </div>
-
-        <div class="card" data-reveal="up">
-          <div class="card__title">Maintenance</div>
-          <p class="card__text">
-            Keep your site fast, secure, and up-to-date. Monthly care plans with priority support.
-          </p>
-          <div class="card__meta">
-            <span class="chip">Updates</span>
-            <span class="chip">Security</span>
-            <span class="chip">Support</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process Section -->
-  <section id="process" class="section">
-    <div class="container">
-      <div class="section-header" data-reveal="up">
-        <div class="section-header__label">How We Work</div>
-        <h2 class="section-header__title">A Process That Delivers</h2>
-        <p class="section-header__text">
-          Clear milestones, transparent communication, and a relentless focus on quality at every stage.
-        </p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline__item" data-reveal="up">
-          <div class="timeline__number">01</div>
-          <h3 class="timeline__title">Discovery & Strategy</h3>
-          <p>Deep dive into your business, audience, and goals. Competitive analysis and strategic positioning.</p>
-        </div>
-
-        <div class="timeline__item" data-reveal="up">
-          <div class="timeline__number">02</div>
-          <h3 class="timeline__title">Design & Prototyping</h3>
-          <p>Swiss editorial layouts in Figma. Interactive prototypes you can click through before we write a line of code.</p>
-        </div>
-
-        <div class="timeline__item" data-reveal="up">
-          <div class="timeline__number">03</div>
-          <h3 class="timeline__title">Development</h3>
-          <p>Clean, semantic code built for speed and SEO. Regular check-ins and staging environment access.</p>
-        </div>
-
-        <div class="timeline__item" data-reveal="up">
-          <div class="timeline__number">04</div>
-          <h3 class="timeline__title">Testing & Optimization</h3>
-          <p>Cross-browser testing, performance tuning, and accessibility audits. We aim for 98+ Lighthouse scores.</p>
-        </div>
-
-        <div class="timeline__item" data-reveal="up">
-          <div class="timeline__number">05</div>
-          <h3 class="timeline__title">Launch & Support</h3>
-          <p>Smooth deployment, training, and 30 days of post-launch support included. Maintenance plans available.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section id="cta" class="section">
-    <div class="container">
-      <div class="text-center" data-reveal="up">
-        <h2 class="mb-2">Ready to Build Something Exceptional?</h2>
-        <p class="text-large mb-3" style="max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.8;">
-          Let's discuss your project. Fast turnaround, transparent pricing, award-level results.
-        </p>
-        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-          <a href="/contact.html" class="btn btn--primary">Start a Project</a>
-          <a href="/pricing.html" class="btn">View Pricing</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__content">
-        <div class="footer__section">
-          <h4>bytecrafts</h4>
-          <p style="opacity: 0.7; font-size: 0.95rem;">
-            Elite web design and development for brands that demand excellence.
-          </p>
+    <div class="footer-top">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <div class="footer-mid">
+      <span>All Rights Reserved © 2024</span>
+      <div class="footer-contact">
+        <div class="contact-block">
+          <h3>Business</h3>
+          <a href="mailto:hello@bytecrafts.design">hello@bytecrafts.design</a>
         </div>
-
-        <div class="footer__section">
-          <h4>Services</h4>
-          <ul class="footer__links">
-            <li><a href="/services.html">Web Design</a></li>
-            <li><a href="/services.html">Development</a></li>
-            <li><a href="/services.html">Branding</a></li>
-            <li><a href="/services.html">SEO Strategy</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__section">
-          <h4>Company</h4>
-          <ul class="footer__links">
-            <li><a href="/work.html">Work</a></li>
-            <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__section">
-          <h4>Connect</h4>
-          <ul class="footer__links">
-            <li><a href="mailto:hello@bytecrafts.ca">hello@bytecrafts.ca</a></li>
-            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
+        <div class="contact-block">
+          <h3>General</h3>
+          <a href="mailto:hi@bytecrafts.design">hi@bytecrafts.design</a>
         </div>
       </div>
-
-      <div class="footer__bottom">
-        © 2026 bytecrafts.ca — All rights reserved.
-      </div>
+    </div>
+    <div class="footer-brand">
+      <span class="footer-brand-name">Bytecrafts</span>
+      <span class="footer-brand-tag">Crafted in Code</span>
+      <span class="footer-year">SINCE 2024</span>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
