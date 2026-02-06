@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bytecrafts – Web Design Studio</title>
   <meta name="description" content="Web design studio in Toronto, Canada. Strategy, design & development for modern brands. Sites that move.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +13,33 @@
 <body>
   <header class="header">
     <a href="index.html" class="logo">Bytecrafts</a>
-    <nav class="nav">
-      <a href="index.html#work">Work</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="header-meta">
       <span class="location">Toronto, Canada</span>
       <span class="year">2024</span>
     </div>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-overlay">
+      <span class="nav-toggle-line nav-toggle-line--1"></span>
+      <span class="nav-toggle-line nav-toggle-line--2"></span>
+      <span class="nav-toggle-line nav-toggle-line--3"></span>
+    </button>
   </header>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <nav class="nav-overlay-inner" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-overlay-link">Home</a>
+      <a href="services.html" class="nav-overlay-link">Services</a>
+      <a href="contact.html" class="nav-overlay-link">Contact</a>
+      <div class="nav-overlay-meta">
+        <span class="location">Toronto, Canada</span>
+        <span class="year">2024</span>
+      </div>
+    </nav>
+    <div class="nav-overlay-bg" aria-hidden="true"></div>
+  </div>
 
   <main>
     <section class="hero">

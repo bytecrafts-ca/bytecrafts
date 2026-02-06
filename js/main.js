@@ -1,6 +1,78 @@
 (function () {
   'use strict';
 
+  /* ----- Mobile nav: hamburger + overlay + stunning animation ----- */
+  (function initMobileNav() {
+    const toggle = document.querySelector('.nav-toggle');
+    const overlay = document.getElementById('nav-overlay');
+    const overlayLinks = overlay ? overlay.querySelectorAll('.nav-overlay-link') : [];
+    const overlayBg = overlay ? overlay.querySelector('.nav-overlay-bg') : null;
+    const useMotion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function openNav() {
+      if (!overlay) return;
+      document.body.classList.add('nav-open');
+      overlay.classList.add('is-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'true');
+      overlay.setAttribute('aria-hidden', 'false');
+
+      /* GSAP stagger animation when available */
+      if (useMotion && typeof gsap !== 'undefined' && overlayLinks.length) {
+        overlay.classList.add('nav-anim-gsap');
+        gsap.fromTo(overlayLinks, { y: 32, opacity: 0 }, {
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          stagger: 0.09,
+          ease: 'power3.out',
+          overwrite: true
+        });
+        const meta = overlay.querySelector('.nav-overlay-meta');
+        if (meta) {
+          gsap.fromTo(meta, { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, delay: 0.4, ease: 'power2.out' });
+        }
+      }
+
+      requestAnimationFrame(function () {
+        overlayLinks[0]?.focus({ preventScroll: true });
+      });
+    }
+
+    function closeNav() {
+      if (!overlay) return;
+      document.body.classList.remove('nav-open');
+      overlay.classList.remove('is-open');
+      overlay.classList.remove('nav-anim-gsap');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      overlay.setAttribute('aria-hidden', 'true');
+      toggle?.focus();
+    }
+
+    function toggleNav() {
+      overlay?.classList.contains('is-open') ? closeNav() : openNav();
+    }
+
+    if (toggle && overlay) {
+      toggle.addEventListener('click', toggleNav);
+      overlayBg?.addEventListener('click', closeNav);
+      overlayLinks.forEach(function (link) {
+        link.addEventListener('click', closeNav);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay?.classList.contains('is-open')) {
+          closeNav();
+        }
+      });
+
+      /* Close on resize to desktop */
+      window.matchMedia('(min-width: 900px)').addEventListener('change', function (m) {
+        if (m.matches) closeNav();
+      });
+    }
+  })();
+
+  if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -233,12 +305,13 @@
     });
   }
 
-  /* ----- Header: hide on scroll down, show on scroll up ----- */
+  /* ----- Header: hide on scroll down, show on scroll up (skip when nav open) ----- */
   const header = document.querySelector('.header');
   if (header) {
     let lastY = window.scrollY;
     const delta = 60;
     window.addEventListener('scroll', function () {
+      if (document.body.classList.contains('nav-open')) return;
       const y = window.scrollY;
       if (y > 200 && y > lastY + delta) {
         gsap.to(header, { y: -100, duration: 0.3, ease: 'power2.out' });
@@ -247,6 +320,14 @@
         gsap.to(header, { y: 0, duration: 0.3, ease: 'power2.out' });
         lastY = y;
       }
+    }, { passive: true });
+  }
+
+  /* ----- Header: add scrolled class for backdrop ----- */
+  const headerEl = document.querySelector('.header');
+  if (headerEl) {
+    window.addEventListener('scroll', function () {
+      headerEl.classList.toggle('scrolled', window.scrollY > 80);
     }, { passive: true });
   }
 })();

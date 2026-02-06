@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Services & Pricing – Bytecrafts</title>
   <meta name="description" content="Transparent pricing and process. Strategy, design & development packages for modern brands. Toronto, Canada.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +13,33 @@
 <body class="page-services">
   <header class="header">
     <a href="index.html" class="logo">Bytecrafts</a>
-    <nav class="nav">
-      <a href="index.html#work">Work</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
       <a href="services.html" class="nav-link-active">Services</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="header-meta">
       <span class="location">Toronto, Canada</span>
       <span class="year">2024</span>
     </div>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-overlay">
+      <span class="nav-toggle-line nav-toggle-line--1"></span>
+      <span class="nav-toggle-line nav-toggle-line--2"></span>
+      <span class="nav-toggle-line nav-toggle-line--3"></span>
+    </button>
   </header>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <nav class="nav-overlay-inner" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-overlay-link">Home</a>
+      <a href="services.html" class="nav-overlay-link nav-overlay-link-active">Services</a>
+      <a href="contact.html" class="nav-overlay-link">Contact</a>
+      <div class="nav-overlay-meta">
+        <span class="location">Toronto, Canada</span>
+        <span class="year">2024</span>
+      </div>
+    </nav>
+    <div class="nav-overlay-bg" aria-hidden="true"></div>
+  </div>
 
   <main>
     <div class="scroll-progress" role="presentation" aria-hidden="true"></div>
@@ -59,7 +76,7 @@
               <li>1 round of revisions</li>
               <li>2–3 week timeline</li>
             </ul>
-            <a href="index.html#contact" class="pricing-cta">Get started</a>
+            <a href="contact.html" class="pricing-cta">Get started</a>
           </div>
         </article>
         <article class="pricing-card pricing-card-featured" data-tier="pro">
@@ -79,7 +96,7 @@
               <li>2 rounds of revisions</li>
               <li>4–6 week timeline</li>
             </ul>
-            <a href="index.html#contact" class="pricing-cta">Get started</a>
+            <a href="contact.html" class="pricing-cta">Get started</a>
           </div>
         </article>
         <article class="pricing-card" data-tier="full">
@@ -97,7 +114,7 @@
               <li>Ongoing support available</li>
               <li>Timeline by scope</li>
             </ul>
-            <a href="index.html#contact" class="pricing-cta">Let's talk</a>
+            <a href="contact.html" class="pricing-cta">Let's talk</a>
           </div>
         </article>
       </div>
@@ -204,7 +221,7 @@
         <span class="word-wrap"><span class="word">start?</span></span>
       </h2>
       <p class="services-cta-copy">Tell us about your project. We’ll reply within 24 hours with a ballpark and next steps.</p>
-      <a href="index.html#contact" class="services-cta-link">
+      <a href="contact.html" class="services-cta-link">
         <span class="services-cta-link-text">Get in touch</span>
         <span class="services-cta-link-text services-cta-link-text--hover">Get in touch</span>
       </a>
