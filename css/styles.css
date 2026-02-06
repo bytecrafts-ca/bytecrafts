@@ -1,4 +1,4 @@
-/* BASEBORN / Awwwards-inspired: minimal palette, clean typography, generous space */
+/* Bytecrafts – minimal dark theme, Toronto */
 
 :root {
   --bg: #050505;
@@ -33,6 +33,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 4px;
 }
 
 /* ----- Header ----- */
@@ -72,21 +77,12 @@ a {
   color: var(--fg);
 }
 
-.nav sup {
-  font-size: 0.65em;
-  opacity: 0.7;
-}
-
 .header-meta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: clamp(0.75rem, 1.5vw, 0.8125rem);
   color: var(--muted);
-}
-
-.header-meta .year {
-  opacity: 0.8;
 }
 
 /* ----- Hero ----- */
@@ -97,11 +93,6 @@ a {
   align-items: center;
   justify-content: center;
   padding: calc(var(--space) * 2) var(--space);
-  position: relative;
-}
-
-.hero-mark {
-  margin-bottom: 2rem;
 }
 
 .hero-mark-inner {
@@ -120,6 +111,7 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .hero-cta-text {
@@ -149,30 +141,6 @@ a {
   padding: clamp(4rem, 12vw, 8rem) clamp(1.5rem, 5vw, 4rem);
 }
 
-.dictionary {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.5rem 1rem;
-  margin-bottom: clamp(2rem, 5vw, 3.5rem);
-  font-size: clamp(0.875rem, 1.8vw, 1rem);
-  color: var(--muted);
-}
-
-.dictionary-pronunciation {
-  font-style: italic;
-}
-
-.dictionary-pos {
-  font-style: italic;
-  opacity: 0.8;
-}
-
-.dictionary-def {
-  opacity: 0.9;
-}
-
-/* Headline: word-by-word for GSAP */
 .headline {
   font-size: clamp(2rem, 5vw, 3.75rem);
   font-weight: 400;
@@ -194,70 +162,186 @@ a {
   display: inline-block;
 }
 
-/* Project list ----- */
-.project-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0;
+/* Featured project (single showcase) ----- */
+.featured-project {
   border-top: 1px solid var(--border);
+  padding-top: clamp(2rem, 6vw, 4rem);
 }
 
-.project-item {
-  border-bottom: 1px solid var(--border);
-}
-
-.project-link {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding: clamp(1.5rem, 4vw, 2.5rem) 0;
+.featured-project-link {
+  display: block;
   transition: opacity 0.2s ease;
 }
 
-.project-link:hover {
-  opacity: 0.85;
+.featured-project-link:hover {
+  opacity: 0.9;
 }
 
-.project-image-wrap {
-  aspect-ratio: 16 / 10;
-  max-width: 320px;
-  border-radius: 4px;
+.featured-project-image-wrap {
+  aspect-ratio: 21 / 9;
+  max-width: 100%;
+  border-radius: 6px;
   overflow: hidden;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.project-image {
+.featured-project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover .project-image {
-  transform: scale(1.03);
+.featured-project-link:hover .featured-project-image {
+  transform: scale(1.02);
 }
 
-.project-info {
-  text-align: right;
+.featured-project-info {
+  max-width: 36rem;
 }
 
-.project-name {
+.featured-project-role {
   display: block;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5em;
+}
+
+.featured-project-name {
+  display: block;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 400;
   letter-spacing: -0.02em;
-  margin-bottom: 0.35em;
+  margin-bottom: 0.5em;
 }
 
-.project-name .char {
+.featured-project-name .char {
   display: inline-block;
 }
 
-.project-tagline {
-  font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);
+.featured-project-tagline {
+  display: block;
+  font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+  line-height: 1.5;
   color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.featured-project-cta {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.featured-project-link:hover .featured-project-cta {
+  opacity: 0.8;
+}
+
+/* ----- Studio ----- */
+.studio {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(4rem, 12vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--border);
+}
+
+.studio-inner {
+  max-width: 50ch;
+}
+
+.studio-title {
+  font-size: clamp(0.75rem, 1.5vw, 0.8125rem);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+}
+
+.studio-copy {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.65;
+  color: var(--fg);
+  margin: 0 0 clamp(2.5rem, 6vw, 4rem);
+}
+
+.studio-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(2rem, 5vw, 3rem);
+}
+
+.studio-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.studio-stat-value {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.studio-stat-label {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* ----- Tech (languages & frameworks) ----- */
+.tech {
+  max-width: 100%;
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.tech-title {
+  font-size: clamp(0.75rem, 1.5vw, 0.8125rem);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-strip-wrap {
+  display: flex;
+  width: max-content;
+  animation: tech-marquee 30s linear infinite;
+}
+
+.tech-strip-wrap:hover {
+  animation-play-state: paused;
+}
+
+.tech-strip {
+  display: flex;
+  gap: clamp(2rem, 6vw, 4rem);
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.tech-item {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes tech-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ----- Contact ----- */
@@ -337,10 +421,6 @@ a {
   gap: 2rem;
 }
 
-.footer-contact .contact-block h3 {
-  margin-bottom: 0.25rem;
-}
-
 .footer-contact .contact-block a {
   font-size: 0.9375rem;
 }
@@ -369,24 +449,14 @@ a {
   margin-top: 0.25rem;
 }
 
-/* Responsive ----- */
 @media (max-width: 768px) {
   .header {
     flex-wrap: wrap;
     gap: 1rem;
   }
 
-  .project-link {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .project-info {
-    text-align: left;
-  }
-
-  .project-image-wrap {
-    max-width: 100%;
+  .featured-project-image-wrap {
+    aspect-ratio: 16 / 10;
   }
 
   .footer {

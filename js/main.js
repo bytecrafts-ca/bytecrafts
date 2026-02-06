@@ -16,19 +16,32 @@
     gsap.fromTo(heroCta, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.5 });
   }
 
-  /* ----- Dictionary block: scroll reveal ----- */
-  const dictionary = document.querySelector('.dictionary');
-  if (dictionary) {
-    gsap.fromTo(dictionary, { opacity: 0, y: 32 }, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power3.out',
+  /* ----- Scroll progress bar ----- */
+  const scrollProgress = document.querySelector('.scroll-progress');
+  if (scrollProgress) {
+    gsap.to(scrollProgress, {
+      scaleX: 1,
+      ease: 'none',
       scrollTrigger: {
-        trigger: dictionary,
-        start: 'top 85%',
-        end: 'top 50%',
-        toggleActions: 'play none none none',
+        trigger: document.body,
+        start: 0,
+        end: 'max',
+        scrub: 0.2,
+      },
+    });
+  }
+
+  /* ----- Hero scroll cue: fade out after scroll ----- */
+  const heroScrollCue = document.querySelector('.hero-scroll-cue');
+  if (heroScrollCue) {
+    gsap.to(heroScrollCue, {
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: document.body,
+        start: '100px top',
+        end: '400px top',
+        scrub: 0.5,
       },
     });
   }
@@ -52,48 +65,139 @@
     });
   }
 
-  /* ----- Project list: stagger items on scroll ----- */
-  const projectItems = document.querySelectorAll('.project-item');
-  projectItems.forEach((item, i) => {
-    const link = item.querySelector('.project-link');
-    const imgWrap = item.querySelector('.project-image-wrap');
-    const info = item.querySelector('.project-info');
-    if (!link) return;
+  /* ----- Intro copy: scroll reveal ----- */
+  const introCopy = document.querySelector('.intro-copy');
+  if (introCopy) {
+    gsap.fromTo(introCopy, { opacity: 0, y: 24 }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: introCopy,
+        start: 'top 85%',
+        end: 'top 50%',
+        toggleActions: 'play none none none',
+      },
+    });
+  }
 
+  /* ----- Featured project: single showcase reveal ----- */
+  const featuredProject = document.querySelector('.featured-project');
+  if (featuredProject) {
+    const imgWrap = featuredProject.querySelector('.featured-project-image-wrap');
+    const info = featuredProject.querySelector('.featured-project-info');
+    const chars = featuredProject.querySelectorAll('.featured-project-name .char');
     gsap.set([imgWrap, info], { opacity: 0, y: 40 });
     gsap.to([imgWrap, info], {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: featuredProject,
+        start: 'top 82%',
+        toggleActions: 'play none none none',
+      },
+    });
+    if (chars.length) {
+      gsap.set(chars, { y: '100%', opacity: 0 });
+      gsap.to(chars, {
+        y: '0%',
+        opacity: 1,
+        duration: 0.45,
+        stagger: 0.02,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: featuredProject,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      });
+    }
+  }
+
+  /* ----- Studio section: reveal ----- */
+  const studio = document.querySelector('.studio');
+  if (studio) {
+    const studioCopy = studio.querySelector('.studio-copy');
+    const stats = studio.querySelectorAll('.studio-stat');
+    gsap.set([studio.querySelector('.studio-title'), studioCopy, ...stats], { opacity: 0, y: 28 });
+    gsap.to([studio.querySelector('.studio-title'), studioCopy], {
       opacity: 1,
       y: 0,
       duration: 0.7,
       stagger: 0.1,
       ease: 'power3.out',
       scrollTrigger: {
-        trigger: item,
-        start: 'top 88%',
-        end: 'top 55%',
+        trigger: studio,
+        start: 'top 82%',
         toggleActions: 'play none none none',
       },
     });
+    gsap.to(stats, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: studio,
+        start: 'top 82%',
+        toggleActions: 'play none none none',
+      },
+    });
+  }
 
-    /* Letter-by-letter reveal on project name (on scroll into view) */
-    const chars = item.querySelectorAll('.project-name .char');
-    if (chars.length) {
-      gsap.set(chars, { y: '100%', opacity: 0 });
-      gsap.to(chars, {
-        y: '0%',
+  /* ----- Services: title + stagger cards ----- */
+  const services = document.querySelector('.services');
+  if (services) {
+    const servicesTitle = services.querySelector('.services-title');
+    const serviceCards = services.querySelectorAll('.service-card');
+    gsap.set([servicesTitle, ...serviceCards], { opacity: 0, y: 32 });
+    gsap.to(servicesTitle, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: services,
+        start: 'top 82%',
+        toggleActions: 'play none none none',
+      },
+    });
+    gsap.to(serviceCards, {
+      opacity: 1,
+      y: 0,
+      duration: 0.65,
+      stagger: 0.12,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: services,
+        start: 'top 82%',
+        toggleActions: 'play none none none',
+      },
+    });
+  }
+
+  /* ----- Tech: title reveal ----- */
+  const techSection = document.querySelector('.tech');
+  if (techSection) {
+    const techTitle = techSection.querySelector('.tech-title');
+    if (techTitle) {
+      gsap.fromTo(techTitle, { opacity: 0, y: 16 }, {
         opacity: 1,
-        duration: 0.4,
-        stagger: 0.02,
-        ease: 'power2.out',
+        y: 0,
+        duration: 0.6,
         scrollTrigger: {
-          trigger: item,
-          start: 'top 85%',
-          end: 'top 50%',
+          trigger: techSection,
+          start: 'top 88%',
           toggleActions: 'play none none none',
         },
       });
     }
-  });
+  }
 
   /* ----- Contact section: fade in ----- */
   const contact = document.querySelector('.contact');
