@@ -44,7 +44,7 @@
 
   /* ----- Contact content: form + info block with strong stagger ----- */
   const contentSection = document.querySelector('.contact-page-content');
-  const formWrap = document.querySelector('.contact-form-wrap');
+  const formWrap = document.querySelector('.contact-form-card');
   const formFields = document.querySelectorAll('.contact-form .contact-field');
   const submitBtn = document.querySelector('.contact-submit');
   const infoBlock = document.querySelector('.contact-info-block');

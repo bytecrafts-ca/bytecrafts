@@ -274,21 +274,23 @@
   /* ----- Contact section: fade in ----- */
   const contact = document.querySelector('.contact');
   if (contact) {
-    const blocks = contact.querySelectorAll('.contact-block');
-    gsap.set(blocks, { opacity: 0, y: 24 });
-    gsap.to(blocks, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: contact,
-        start: 'top 85%',
-        end: 'top 55%',
-        toggleActions: 'play none none none',
-      },
-    });
+    const items = contact.querySelectorAll('.contact-simple > *');
+    if (items.length) {
+      gsap.set(items, { opacity: 0, y: 20 });
+      gsap.to(items, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: contact,
+          start: 'top 85%',
+          end: 'top 55%',
+          toggleActions: 'play none none none',
+        },
+      });
+    }
   }
 
   /* ----- Footer: subtle reveal ----- */
